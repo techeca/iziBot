@@ -4,6 +4,7 @@ import pyautogui
 import time
 import numpy as np
 from config import ruta_imagen_captura, ruta_imagen_recortada
+from utils.log import log_info, log_error
 
 def capturaPantalla():
         captura = ruta_imagen_captura
@@ -18,7 +19,7 @@ def capturaPantalla():
 
             # Intenta guardar la imagen en la ruta especificada
             imagen.save(captura)
-            print(f"Captura de pantalla guardada en {captura}")
+            log_info(f"Captura de pantalla guardada en {captura}")
 
             # Elimina la imagen para liberar memoria
             del imagen
@@ -30,7 +31,7 @@ def capturaPantalla():
             gc.collect()
 
         except Exception as e:
-            print(f"Error al capturar o guardar la imagen: {e}")
+            log_error(f"Error al capturar o guardar la imagen: {e}")
 
 def recorte_Imagen(coords):
     captura = ruta_imagen_captura
@@ -72,8 +73,8 @@ def recorte_Imagen(coords):
         # Asegurarse de que cualquier ventana de OpenCV se cierre correctamente
         cv2.destroyAllWindows()
    
-#Busca la imagen la cantidad de veces entregada, y si es necesario le da clic    
 def clickEnImagen(ruta_imagen, cantidad, clic=True):
+    #Busca la imagen la cantidad de veces entregada, y si es necesario le da clic    
     # Seguimiento de los intentos realizados
     intentos_realizados = 0
 
@@ -102,7 +103,7 @@ def clickEnImagen(ruta_imagen, cantidad, clic=True):
 
             # Define un umbral de confianza (ajusta según tus necesidades)
             umbral_confianza = 0.8
-            print(f"Valor de coincidencia: {max_val}")
+            log_info(f"Valor de coincidencia: {max_val}")
 
             if max_val >= umbral_confianza:
                 # Obtiene las coordenadas del centro de la imagen de referencia
@@ -112,7 +113,7 @@ def clickEnImagen(ruta_imagen, cantidad, clic=True):
                 if clic:
                 # Haz clic en el centro de la imagen encontrada
                     pyautogui.click(centro_x, centro_y)
-                    print(f"Clic realizado en ({centro_x}, {centro_y})")
+                    log_info(f"Clic realizado en ({centro_x}, {centro_y})")
                 
                 time.sleep(1)
                 # Libera la memoria de las imágenes antes de salir
@@ -121,7 +122,7 @@ def clickEnImagen(ruta_imagen, cantidad, clic=True):
                 return  # Salir de la función después de hacer clic exitosamente
 
             else:
-                print("Imagen no encontrada, intentando de nuevo...")
+                log_info("Imagen no encontrada, intentando de nuevo...")
                 # Añadir un pequeño retraso antes de reintentar
                 time.sleep(0.5)
 
@@ -130,7 +131,7 @@ def clickEnImagen(ruta_imagen, cantidad, clic=True):
             del captura_pantalla_cv2
 
         except Exception as e:
-            print(f"Error en clickEnImagen: {e}")
+            log_error(f"Error en clickEnImagen: {e}")
             break  # Salir del bucle si hay un error crítico
 
     raise RuntimeError(

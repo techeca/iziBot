@@ -5,7 +5,6 @@ from core.ocr import OCR
 
 def clicEnPantalla(x, y):
     pyautogui.click(x, y)
-    #print(f"Clic en {x}, {y}")
 
 def esperar(segundos):
     time.sleep(segundos)
