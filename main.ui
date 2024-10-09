@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.4" author="PygubuDesigner 0.39.3">
+  <project>
+    <settings />
+    <customwidgets />
+  </project>
+  <object class="tk.Tk" id="main">
+    <property name="height">200</property>
+    <property name="title" translatable="yes">IziBot</property>
+    <child>
+      <object class="ttk.Treeview" id="tvRutina" named="True">
+        <property name="height">12</property>
+        <property name="selectmode">extended</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">6</property>
+          <property name="pady">6</property>
+          <property name="row">0</property>
+          <property name="sticky">ne</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Labelframe" id="labelframe1">
+        <property name="height">200</property>
+        <property name="text" translatable="yes">Controles</property>
+        <property name="width">200</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">6</property>
+          <property name="pady">3</property>
+          <property name="row">0</property>
+          <property name="sticky">nw</property>
+        </layout>
+        <child>
+          <object class="ttk.Button" id="btnClic" named="True">
+            <property name="command" type="command" cbtype="simple">add_clic</property>
+            <property name="text" translatable="yes">Clic</property>
+            <layout manager="pack">
+              <property name="ipadx">6</property>
+              <property name="padx">6</property>
+              <property name="pady">6</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btnEsperar" named="True">
+            <property name="command" type="command" cbtype="simple">add_esperar</property>
+            <property name="text" translatable="yes">Esperar</property>
+            <layout manager="pack">
+              <property name="ipadx">6</property>
+              <property name="padx">6</property>
+              <property name="pady">6</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btnEscribir" named="True">
+            <property name="command" type="command" cbtype="simple">add_escribir</property>
+            <property name="text" translatable="yes">Escribir</property>
+            <layout manager="pack">
+              <property name="ipadx">6</property>
+              <property name="padx">6</property>
+              <property name="pady">6</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btnLeer" named="True">
+            <property name="command" type="command" cbtype="simple">add_leer</property>
+            <property name="text" translatable="yes">Leer</property>
+            <layout manager="pack">
+              <property name="ipadx">6</property>
+              <property name="padx">6</property>
+              <property name="pady">6</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btnQuitar" named="True">
+            <property name="command" type="command" cbtype="simple">eliminar_accion</property>
+            <property name="text" translatable="yes">Quitar</property>
+            <layout manager="pack">
+              <property name="ipadx">6</property>
+              <property name="padx">6</property>
+              <property name="pady">6</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Checkbutton" id="checkBtn" named="True">
+            <property name="text" translatable="yes">Bucle</property>
+            <layout manager="pack">
+              <property name="fill">both</property>
+              <property name="padx">6</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btnIniciar" named="True">
+            <property name="command" type="command" cbtype="simple">iniciar_rutina</property>
+            <property name="text" translatable="yes">Iniciar</property>
+            <layout manager="pack">
+              <property name="ipadx">6</property>
+              <property name="padx">6</property>
+              <property name="pady">6</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
