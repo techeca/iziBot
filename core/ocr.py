@@ -1,6 +1,6 @@
 import pytesseract
 import cv2
-from core import ruta_imagen_recortada
+from config import ruta_imagen_recortada
 
 def OCR():
     # Configura la ruta al ejecutable de Tesseract (puede variar según tu instalación)

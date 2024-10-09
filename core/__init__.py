@@ -1,9 +1,12 @@
-from .ocr import OCR
 from .image import clickEnImagen
 from .pantalla import clicEnPantalla, esperar, leerTextoEnPantalla, escribir
+from config import ruta_imagen_captura, ruta_imagen_recortada
 
-# Variables de configuración
-ruta_imagen_captura = './captura.png'
-ruta_imagen_recortada = './recorte.png'
-
-__all__ = ['OCR', 'clickEnImagen', 'clicEnPantalla', 'esperar', 'leerTextoEnPantalla', 'escribir']
+__all__ = ['clickEnImagen', 
+           'clicEnPantalla', 
+           'esperar', 
+           'leerTextoEnPantalla', 
+           'escribir', 
+           'ruta_imagen_captura', 
+           'ruta_imagen_recortada'
+           ]

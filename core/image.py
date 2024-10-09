@@ -3,7 +3,7 @@ import gc
 import pyautogui
 import time
 import numpy as np
-from core import ruta_imagen_captura, ruta_imagen_recortada
+from config import ruta_imagen_captura, ruta_imagen_recortada
 
 def capturaPantalla():
         captura = ruta_imagen_captura

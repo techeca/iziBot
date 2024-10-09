@@ -1,7 +1,7 @@
 import pyautogui
 import time
-import image
-import ocr
+from core.image import capturaPantalla, recorte_Imagen
+from core.ocr import OCR
 
 def clicEnPantalla(x, y):
     pyautogui.click(x, y)
@@ -11,9 +11,9 @@ def esperar(segundos):
     time.sleep(segundos)
     
 def leerTextoEnPantalla(coords):
-    image.capturaPantalla()
-    image.recorte_Imagen(coords)
-    texto = ocr.OCR()
+    capturaPantalla()
+    recorte_Imagen(coords)
+    texto = OCR()
     return texto
 
 def escribir(texto):
