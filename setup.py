@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='core_iziBot',                 
     version='1.0.0',                     
-    packages=find_packages(exclude=['rutina', 'utils']),            
+    packages=find_packages(exclude=['rutina']),            
     install_requires=[                   
         'pyautogui',                     
         'numpy',
