@@ -12,29 +12,26 @@ Descargar e instalar [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wi
 [Carpeta completa](https://github.com/techeca/iziBot/releases/download/v1.0.0/iziBot.rar)
 
 ## Uso
-1.- Ejecutar `main.exe` para iniciar  el programa.
-2.- Ingresa la acciones que deseas para generar una rutina.
+1.- Ejecutar `main.exe` para iniciar  el programa.  
+2.- Ingresa la acciones que deseas para generar una rutina.  
 3.- Inicia la rutina. 
 
-### Clic
-Realiza un Clic en el lugar especificado.
+![](https://github.com/techeca/iziBot/blob/main/iziBotEx.gif)
 
-### Esperar
-Espera el tiempo especificado.
-
-### Escribir
-Escribe el texto especificado.
+`clic` Realiza un Clic en el lugar especificado.  
+`esperar` Espera el tiempo especificado.  
+`escribir` Escribe el texto especificado.
 
 ## Core
-Las funciones principales del `core` pueden ser reutilizadas en otros proyectos de la siguiente forma:
+Las funciones principales del `core` pueden ser reutilizadas en otros proyectos, a contiuación tiene una pequeña explicación de la estructura del proyecto y como utilizarlas.
 
 ### Estructura
 
-Core: Contiene las funciones principales para realizar las tareas de automatización.  
+`Core` Contiene las funciones principales para realizar las tareas de automatización.  
 
-Utils: Funcione necesarias para apoyar la automatización.
+`Utils` Funciones necesarias para apoyar la automatización.
 
-Rutina: Clases para la adminitración de acciones de una rutina.
+`Rutina` Clases para la administración de acciones en una rutina.
 
 `NOTA` Por defecto se genera una imagen de captura de pantalla y recorte en la raíz del proyecto, esta ruta puede ser modificada en `config.py`.
 
@@ -43,7 +40,7 @@ ruta_imagen_captura = './captura.png'
 ruta_imagen_recortada = './recorte.png'
 ```
 
-Instalar
+Clonar Repositorio
 ```bash
 git clone https://github.com/techeca/iziBot.git
 ```
